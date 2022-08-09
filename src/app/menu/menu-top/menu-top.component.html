@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['']">{{ title }}</a>
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']" [routerLinkActive]="['active']">Home</a>
+      </li>
+      <div *ngIf="logged === false" style="display: flex;">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['auth/login']" [routerLinkActive]="['active']"
+            [routerLinkActiveOptions]="{ exact: true }">Login</a>
+        </li>
+      </div>
+      <div style="display: flex;">
+        <li class="nav-item">
+          <a class="nav-link" style="cursor: pointer" (click)="kill()">
+            Logout
+          </a>
+        </li>
+      </div>
+    </ul>
+  </div>
+</nav>

@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  loginUrl: 'https://reqres.in',
+  baseUrl: 'https://jsonplaceholder.typicode.com/todos'
 };
